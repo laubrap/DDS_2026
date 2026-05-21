@@ -1,0 +1,49 @@
+@startuml
+class Client {
+  + name : String
+  + address : String
+  + contactNumber : String
+  + inUseDispositives : List~String~
+  + clientPlan : Plan
+  + calcularPrecio() : double
+@startuml
+class Client {
+  + name : String
+  + address : String
+  + contactNumber : String
+  + inUseDevices : List<String>
+  + clientPlan : Plan
+  + calculatePrice(int deviceCount) : double
+}
+class MonthlyBill {
+  + calculateAmount(client : Client) : double
+}
+
+
+
+class CommercialPlan {
+  + baseFixedRate : double
+  + additionalPerDevice : double
+  + calculatePrice(int deviceCount) : double
+}
+class HomePlan {
+  + baseFixedRate : double
+  + calculatePrice(int deviceCount) : double
+}
+
+class CorporativePlan{
+  + customRate : double
+  + discountPercentage : double
+  + calculatePrice(int deviceCount) : double
+}
+
+abstract class Plan {
+  + {abstract} calculatePrice(deviceCount : int) : double
+}
+
+MonthlyBill ..> Client
+Plan <|-- CorporativePlan
+Plan <|--CommercialPlan
+Plan <|--HomePlan
+Client o-- Plan
+@enduml

@@ -1,0 +1,14 @@
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Compiled
+*.class
+target/
+
+# Maven/Gradle
+.gradle/
+build/
