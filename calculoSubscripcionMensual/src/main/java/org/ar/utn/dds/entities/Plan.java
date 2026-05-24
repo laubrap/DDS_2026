@@ -1,4 +1,4 @@
-package org.ar.utn.dds.calculosubscripcion;
+package org.ar.utn.dds.entities;
 
 public abstract class Plan {
     final protected double baseFixedRate;

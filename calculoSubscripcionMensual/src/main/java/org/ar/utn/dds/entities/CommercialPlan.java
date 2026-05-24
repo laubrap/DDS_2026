@@ -1,4 +1,4 @@
-package org.ar.utn.dds.calculosubscripcion;
+package org.ar.utn.dds.entities;
 
 public class CommercialPlan extends Plan {
     final private double additionalPerDevice;

@@ -1,4 +1,4 @@
-package org.ar.utn.dds.calculosubscripcion;
+package org.ar.utn.dds.entities;
 
 public class CorporativePlan extends Plan {
     private final double discountPercentage;
@@ -10,7 +10,7 @@ public class CorporativePlan extends Plan {
 
     @Override
     public double calculatePrice(int deviceCount){
-        return baseFixedRate * (1-discountPercentage);
+        return baseFixedRate * (1-(discountPercentage/100));
     }
 
 }

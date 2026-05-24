@@ -1,14 +1,19 @@
-package org.ar.utn.dds.calculosubscripcion;
+package org.ar.utn.dds.entities;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 public class Client {
     private String name;
     private String address;
     private String contactNumber;
     private Plan plan;
-    List<String> inUseDevices;
+    private List<String> inUseDevices;
 
     public Client(String name, String address, String contactNumber, Plan plan) {
         this.name = name;
